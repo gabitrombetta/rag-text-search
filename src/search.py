@@ -2,7 +2,7 @@ import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.preprocessing import normalize
 
-from embeddings import embedding_model
+from src.embeddings import embedding_model
 
 def search(embeddings:list, chunk_vectors:np.ndarray, query:str | list, top_k:int=10, score_threshold:float=0.3) -> list:
     queries = [query] if isinstance(query, str) else query

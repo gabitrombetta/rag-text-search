@@ -18,7 +18,7 @@ queries = [
 
 if not os.path.exists(EMBEDDINGS_FILE):
     print('Gerando embeddings...')
-    docs = load_and_clean_docs(folder_path='docs/')
+    docs = load_and_clean_docs(folder_path='data/raw/')
     chunks = chunking(documents=docs)
     embeddings, vectors = make_embeddings(chunks=chunks)
 else:
